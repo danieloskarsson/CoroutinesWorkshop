@@ -8,7 +8,8 @@ fun main() = runBlocking {
         while (true) {
             try {
                 doSomeWorkThatMayFail()
-            } catch (e: Exception) {
+            } catch (e: MyException) {
+//                ensureActive() will rethrow CancellationException in cases where e would be of the type Exception
                 println("Oops! ${e.message}")
             }
         }
