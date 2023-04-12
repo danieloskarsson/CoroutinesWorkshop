@@ -5,11 +5,11 @@ import kotlinx.coroutines.*
 
 fun main() {
     runBlocking {
-        launch {
+        GlobalScope.launch {
             delay(100)
             log("first child completes")
         }
-        launch {
+        GlobalScope.launch {
             delay(100)
             log("first child completes")
         }
